@@ -73,21 +73,21 @@ main() {
     std::cout << "Enter your full name: ";
     std::getline(std::cin, fullName);
     std::cout << "Do you live in an apartment? (y/n): ";
-    std::cin >> question;
+    std::getline(std::cin, question);
     if (question == "y" || question == "yes") {
         std::cout << "Enter your apartment number: ";
-        std::cin >> apartmentNumberString;
+        std::getline(std::cin, apartmentNumberString);
     }
     std::cout << "Enter your street number: ";
-    std::cin >> streetNumberString;
+    std::getline(std::cin, streetNumberString);
     std::cout << "Enter your street name "
     << "and type (Main St, Express Pkwy...): ";
     std::getline(std::cin, streetName);
     std::cout << "Enter your city: ";
-    std::cin >> city;
+    std::getline(std::cin, city);
     std::cout << "Enter your province "
     << "(as an abbreviation, ex: ON, BC...): ";
-    std::cin >> province;
+    std::getline(std::cin, province);
     std::cout << "Enter your postal code: ";
     std::getline(std::cin, postalCode);
 
@@ -117,7 +117,7 @@ main() {
                 province,
                 postalCode);
         }
-        std::cout << mail << std::endl;
+        std::cout << "\n" << mail << std::endl;
     } catch (std::invalid_argument) {
         std::cout << "Invalid number!" << std::endl;
     }
