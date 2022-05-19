@@ -8,7 +8,7 @@
 #include <string>
 #include <algorithm>
 
-std::string Mail_Address(
+std::string MailAddress(
     std::string name, std::string streetNumber, std::string streetName,
     std::string city, std::string province,
     std::string postalCode, std::string apartmentNumber = ""
@@ -99,7 +99,7 @@ main() {
             apartmentNumberInteger = std::stoi(apartmentNumberString);
             apartmentNumber = std::to_string(apartmentNumberInteger);
             streetNumber = std::to_string(streetNumberInteger);
-            mail = Mail_Address(
+            mail = MailAddress(
                 fullName,
                 streetNumber,
                 streetName,
@@ -109,7 +109,7 @@ main() {
                 apartmentNumber);
         } else {
             streetNumber = std::to_string(streetNumberInteger);
-            mail = Mail_Address(
+            mail = MailAddress(
                 fullName,
                 streetNumber,
                 streetName,
